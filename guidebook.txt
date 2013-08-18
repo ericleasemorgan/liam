@@ -1,0 +1,188 @@
+
+
+Linked Archival Metadata: A Guidebook
+
+
+Overview
+ 
+Linked Archival Metadata: A Guidebook will provide archivists with an overview of the current linked data landscape, define basic concepts, identify practical strategies for adoption, and emphasize the tangible payoffs for archives implementing linked data. It will focus on clarifying why archives and archival users can benefit from linked data and will identify a graduated approach to applying linked data methods to archival description.
+
+The Guidebook is a product of the Linked Archival Metadata planning project (LiAM), led by the Digital Collections and Archives at Tufts University and funded by the Institute of Museum and Library Services (IMLS). LiAM's goals include defining use cases for linked data in archives and providing a roadmap to describe options for archivists intending to share their description using linked data techniques.
+ 
+ 
+Audience and Objectives
+ 
+Linked Archival Metadata: A Guidebook is intended to serve three primary audiences:
+
+  1. Archivists new to linked data
+  2. Archivists familiar with linked data
+  3. Technologists working in archives or with archivists
+
+While these are the primary audiences for the Guidebook, we will also include an executive summary with the core objectives, anticipated outcomes, and implications that will provide administrators or other senior leaders with the information that they will need in order to understand the benefits and potential costs of this path.
+
+These three primary audiences have very different needs. For those just getting started, the Guidebook will provide a conceptual overview of linked data with examples of how it can enable archivists to improve user discovery of collections as well as enhancing archival description. For these users, a key aspect of the Guidebook will be a focus on readiness. It will also provide an introduction to the linked data building blocks that many archives already have in place, showing how the move to linked data will for many be a step rather than a leap.
+
+For archivists with more linked data experience, the Guidebook will provide a environmental scan of the linked data environment today both generally and within the library, archives, and museum communities (LAM). A key aspect of this track within the Guidebook will be the identification of gaps in source data, tools, and practices and recommendations for next steps.
+
+For technologists, the Guidebook will provide an outcome-oriented perspective on the particular benefits that linked data should enable for archivists and archival users; a roadmap for tool and implementation needs identified by the LiAM project; and the aforementioned environmental scan to enable reuse of existing tools and implementations while creating new ones. Recognizing that some technologists may not have extensive experience with archives, the Guidebook will also include information that will ground the technology in archival concepts. The use cases will include the context necessary for those new to archives to understand the objectives of archival description and the needs of users.
+
+Each section of the Guidebook will have content targeted for each audience.
+
+
+Structure
+ 
+The structure of the Guidebook should support readers moving through the text in a variety of ways. Like a travel book, it should provide useful high-level information for users who only need the basics, as well as in-depth information for those planning an extended stay in LOD-land. The Guidebook is intentionally named, and will draw from the genre of actual travel guides (Fodors, etc.) that provide readers easy access to both high-level information (know before you go, what to see if you're only there for a day) as well as in-depth details of for those staying in one place longer. In developing the concept behind the Guidebook, we looked to the Getty Introduction to Metadata as an example of a useful text that combines both basic grounding information and advanced concepts.
+
+Synopses of the use cases developed by the LiAM project will be interspersed throughout the Guidebook to illustrate and frame the text. Each use case will be briefly described in 100-200 words with links to the full use cases on the LiAM website.
+ 
+ 
+Publication
+ 
+Some sections of the Guidebook, particularly the Linked Data Primer, will have enduring value and will have relevance over time. This section will be a static text, with revisions being made only with the release of a new edition.
+
+Much of the rest of the Guidebook, while providing a concise overview of today's linked data landscape and needs, would require ongoing updates, maintenance, and enhancement to describe implementation of LOD in the archival community over time.
+
+An initial release of the Guidebook will be in the form of a PDF document to be delivered to IMLS in fulfillment of the LiAM planning grant requirements as well as being shared with the public. However, the Guidebook's ongoing vitality will benefit from a more dynamic publication environment, and we therefore plan to publish it in a wiki connected to a code repository. This combination will enable updating of the resource to reflect changes in the field as well as providing a mechanism for sharing tools, scripts, and other code related to the project.
+
+
+Brief Outline
+
+  1. Executive Summary
+
+  2. Introduction
+
+     a. Why linked data, and why now? - Linked data, or more recently referred to as "linked open data" for reasons to be explained later, is a proposed technique for generating new knowledge. It is intended to be a synergy between people and sets of agreed upon computer sysystems that when combined will enable both people and computers to discover and build relationships between seemingly disparate data and information to create and discover new knowledge. In a nutshell, this is how it works. People possess data and information. They encode that data and information in any number of formats easily readable by computers. They then put then make the encoded data and information available on the Web. Computers are then employed to systematicaly harvested the encoded data. Since the data is easily readable, the computers store the data locally and look for similarly encoded things in other locally stored data sets. When similar items are identified relationships can be inferred between the items as well as the other items in the data set. To people, some of these relationships may seem obvious and "old hat". On the other hand, since the data sets can be massive, relationships that were never observed previously may come to light, thus new knowledge is created.
+     
+     Some of this knowledge may be trivial. For example, there might be a data set of places -- places from all over the world including things like geographic coordinates, histories of the places, images, etc. There might be another data set of poeple. Each person may be described using their name, their place of birth, and a short biography. These data sets may contain ten's of thousands of items each. Using linked data it would be possible to cross reference the people with the places to discover who might have met whom when and where. Some people may have similar ideas, and those ideas may have been generated in a particular place. Linked data may help in discovering who was in the same place at the same time and the researcher may be better able to figure out how a particular idea came to fruition. 
+     
+     Here's an example hitting closer to the home of archives and archivists. Suppose most archival finding aids were written in a format easily readable by computers. Let's call this format Encoded Archival Description. Let's suppose these finding aids were made available on the Web. Let's suppose one or more computers crawled thesearchival sites harvesting the finding aids. Once done a computer program could be used to find all the occurances of particular name and generate a virtual finding aid that is more complete and more comprehensible than any single finding aid on that particular person. 
+     
+     The amount of data and information accessible today is greater in size than it has ever been in human history. Using our traditional techniques of reading, re-reading, writing, discussing, etc. is more than possible to learn new things about the state of the world, the universe, and the human condition. By exploiting the current state of computer technology is possible to expand upon our traditional techniques and possibly excellerate the mass of knowledge. 
+     
+     b. How to use the Guidebook
+
+  3. Linked Data for Archives: a Primer
+
+     a. Objectives: management, access, and use and linked data affordances
+     b. Overview of linked data concepts and vocabulary
+     c. Brief overview of the history of LOD-LAM
+     d. Examples
+
+  4. Linked Data Today
+
+     a. Projects: Brief descriptions with an emphasis on tangible benefits and outcomes of each
+     b. Trends in LOD-LAM - With great interest I read the Spring/Summer issue of Information Standards Quarterly where there were a number of articles pertaining to linked open data in cultural heritage institutions. [0] Of particular interest to me where the various loosely enumerated challenges of linked open data. Some of them included:
+
+  * the apparent Tower Of Babel when it comes to vocabularies used to describe content
+  * dirty, inconsistent, or wide varieties of data integrity
+  * persistent URIs
+  * the “chicken & egg” problem of why linked data if there is no killer application
+
+
+
+  5. Getting Started: Strategies and Steps
+
+     a. Defining your strategy: Articulate goals, objectives, and metrics to measure success.
+     b. Is your archival description LOD-ready?
+     c. Identify building blocks: metadata components in archival description that are (or nearly
+        are) ready for linking.
+     d. Readiness: Making small changes in practice to make your description LOD-ready.
+     e. What you can do now if you have:
+
+       i. EAD
+       ii. EAC-CPF
+       iii. MARC
+       iv. METS, MODS, and perhaps more. This section will provide illustrative examples of what
+          can be done with the linked data building blocks already included in archival description
+
+  6. On Your Way: Next Steps
+
+     a. Integration into daily practice
+     b. Three Cs: Cleanup, Conversion, Consistency
+     c. Tools
+
+  7. Looking Ahead: Advanced Tools and Visualizations
+
+     a. Tools for archivists (data preparation, cleanup, management)
+
+        i. What's available now
+        ii. Gaps: What is needed
+
+     b. Tools for users (visualizations, interfaces)
+
+        i. What's available now
+       ii. Gaps: What is needed
+
+  8. Further reading - Links and citations to get one started on Linked Open Data
+
+	 “About - LOCAH Linked Archives Hub Test Dataset.” Accessed August 16, 2013. http://data.archiveshub.ac.uk/about.html.
+
+	 Berners-Lee, Tim. “Linked Data - Design Issues.” Accessed August 4, 2013. http://www.w3.org/DesignIssues/LinkedData.html.
+
+	 “Ckan - The Open Source Data Portal Software.” Accessed August 14, 2013. http://ckan.org/.
+
+	 “Content Negotiation.” Wikipedia, the Free Encyclopedia, July 2, 2013. https://en.wikipedia.org/w/index.php?title=Content_negotiation&oldid=562532260.
+
+	 “Curl and Libcurl.” Accessed August 6, 2013. http://curl.haxx.se/.
+
+	 David Beckett. “Turtle.” Accessed August 6, 2013. http://www.w3.org/TR/2012/WD-turtle-20120710/.
+
+	 Dunsire, Gordon, Corey Harper, Diane Hillmann, and Jon Phipps. “Linked Data Vocabulary Management: Infrastructure Support, Data Integration, and Interoperability.” Information Standards Quarterly 24, no. 2/3 (2012): 4. doi:10.3789/isqv24n2-3.2012.02.
+
+	 Elliott, Thomas, Sebastian Heath, and John Muccigrosso. “Report on the Linked Ancient World Data Institute.” Information Standards Quarterly 24, no. 2/3 (2012): 43. doi:10.3789/isqv24n2-3.2012.08.
+
+	 Fons, Ted, Jeff Penka, and Richard Wallis. “OCLC’s Linked Data Initiative: Using Schema.org to Make Library Data Relevant on the Web.” Information Standards Quarterly 24, no. 2/3 (2012): 29. doi:10.3789/isqv24n2-3.2012.05.
+
+	 Gruber, Ethan. “Eaditor.” GitHub. Accessed August 12, 2013. https://github.com/ewg118/eaditor.
+
+	 Isaac, Antoine, Robina Clayphan, and Bernhard Haslhofer. “Europeana: Moving to Linked Open Data.” Information Standards Quarterly 24, no. 2/3 (2012): 34. doi:10.3789/isqv24n2-3.2012.06.
+
+	 LiAM. “LiAM: Linked Archival Metadata.” Accessed July 30, 2013. http://sites.tufts.edu/liam/.
+
+	 “Linked Data.” Wikipedia, the Free Encyclopedia, July 13, 2013. http://en.wikipedia.org/w/index.php?title=Linked_data&oldid=562554554.
+
+	 “Linked Open Data in Libraries, Archives, & Museums (Google Group).” Accessed August 6, 2013. https://groups.google.com/forum/#!forum/lod-lam.
+
+	 “Linking Lives | Using Linked Data to Create Biographical Resources.” Accessed August 16, 2013. http://archiveshub.ac.uk/linkinglives/.
+
+	 “LOCAH Linked Archives Hub Test Dataset.” Accessed August 6, 2013. http://data.archiveshub.ac.uk/.
+
+	 LODLAM. “Zotero | Groups > LOD-LAM.” Accessed August 6, 2013. https://www.zotero.org/groups/lod-lam.
+
+	 “LODLAM - Linked Open Data in Libraries, Archives & Museums.” Accessed August 6, 2013. http://lodlam.net/.
+
+	 “Notation3.” Wikipedia, the Free Encyclopedia, July 13, 2013. http://en.wikipedia.org/w/index.php?title=Notation3&oldid=541302540.
+
+	 “OWL 2 Web Ontology Language Primer.” Accessed August 14, 2013. http://www.w3.org/TR/2009/REC-owl2-primer-20091027/.
+
+	 “RDF/XML.” Wikipedia, the Free Encyclopedia, July 13, 2013. http://en.wikipedia.org/w/index.php?title=RDF/XML&oldid=561972340.
+
+	 “RDFa.” Wikipedia, the Free Encyclopedia, July 22, 2013. http://en.wikipedia.org/w/index.php?title=RDFa&oldid=561972699.
+
+	 Rubinstein, Aaron. “OWLDoc.” Accessed August 12, 2013. http://gslis.simmons.edu/archival/arch/index.html.
+
+	 “Semantic Web.” Wikipedia, the Free Encyclopedia, August 2, 2013. http://en.wikipedia.org/w/index.php?title=Semantic_Web&oldid=566813312.
+
+	 “SPARQL.” Wikipedia, the Free Encyclopedia, August 1, 2013. http://en.wikipedia.org/w/index.php?title=SPARQL&oldid=566718788.
+
+	 “SPARQL 1.1 Overview.” Accessed August 6, 2013. http://www.w3.org/TR/sparql11-overview/.
+
+	 “Spring/Summer 2012 (v.24 No.2/3) - National Information Standards Organization.” Accessed August 6, 2013. http://www.niso.org/publications/isq/2012/v24no2-3/.
+
+	 “TemaTres Controlled Vocabulary Server.” Accessed August 14, 2013. http://www.vocabularyserver.com/.
+
+	 “Transforming EAD XML into RDF/XML Using XSLT.” Accessed August 16, 2013. http://archiveshub.ac.uk/locah/tag/transform/.
+
+	 “Turtle (syntax).” Wikipedia, the Free Encyclopedia, July 13, 2013. http://en.wikipedia.org/w/index.php?title=Turtle_(syntax)&oldid=542183836.
+
+	 Voss, Jon. “LODLAM State of Affairs.” Information Standards Quarterly 24, no. 2/3 (2012): 41. doi:10.3789/isqv24n2-3.2012.07.
+
+	 W3C. “LinkedData - W3C Wiki.” Accessed August 4, 2013. http://www.w3.org/wiki/LinkedData.
+
+	 “Welcome - the Datahub.” Accessed August 14, 2013. http://datahub.io/.
+
+
+--
+Eric Lease Morgan
+August 4, 2013
+
