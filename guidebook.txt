@@ -62,6 +62,79 @@ Brief Outline
      b. How to use the Guidebook
 
   3. Linked Data for Archives: a Primer
+  
+What is Linked Data and why should I care?
+
+Linked Data is a process for manifesting the ideas behind Semantic Web. The Semantic Web is about encoding data, information, and knowledge in computer-readable fashions, making these encodings accessible on the World Wide Web, allowing computers to crawl the encodings, and finally, employing reasoning engines against them for the purpose of discovering and creating new knowledge. The canonical article describing this concept was written by Tim Berners-Lee, James Hendler, and Ora Lassila in 2001.
+
+In 2006 Berners-Lee more concretely described how to make the Semantic Web a reality in a text called "Linked Data -- Design Issues". In it he outlined four often-quoted expectations for implementing the Semantic Web. Each of these expectations are listed below along with some elaborations:
+
+  1. "Use URIs as names for things" - URIs (Universal Resource Identifiers) are unique identifiers, and they are expected to have the same shape as URLs (Universal Resource Locators). These identifiers are expected to represent things such as people, places, institutions, concepts, books, etc. URIs are monikers or handles for real world or imaginary objects. 
+
+  2. "Use HTTP URIs so that people can look up those names." - The URIs are expected to look and ideally function on the World Wide Web through the Hypertext Transfer Protocol (HTTP), meaning the URI's point to things on Web servers. 
+
+  3. "When someone looks up a URI, provide useful information, using the standards (RDF*, SPARQL)" - When URIs are sent to Web servers by Web browsers (or "user-agents" in HTTP parlance), the response from the server should be in a conventional, computer readable format. This format is usually a version of RDF (Resource Description Framework) -- a notation looking much like a rudimentary sentence composed of a subject, predicate, and object.
+
+  4. "Include links to other URIs. So that they can discover more things." - Simply put, try very hard to use URIs that other people have have used. This way the relationships you create can literally be linked to the relationships other people have created. These links may represent new knowledge. 
+
+In the same text ("Linked Data -- Design Issues") Berners-Lee also outlined a sort of reward system -- sets of stars -- for levels of implementation. Unfortunately, nobody seems to have taken up the stars very seriously. A person gets:
+
+  * 1 star for making data available on the web (whatever format) but with an open licence, to be Open Data
+  * 2 stars for making the data machine-readable structured data (e.g. excel instead of image scan of a table)
+  * 3 stars for making the data available in non-proprietary format (e.g. CSV instead of excel)
+  * 4 stars for using open standards from W3C (RDF and SPARQL) to identify things, so that people can point at your stuff
+  * 5 stars for linking your data to other people's data to provide context
+
+The whole idea works like this. Suppose I assert the following statement:
+
+  The Declaration Of Independence was authored by Thomas Jefferson.
+  
+This statement can be divided into three parts. The first part is a subject (Declaration Of Independence). The second part is a predicate (was authored by). The third part is an object (Thomas Jefferson). In the language of the Semantic Web and Linked Data, these combined parts are called a triple, and they are expected to denote a fact. Triples are the heart of RDF. 
+
+Suppose further that the subject and object of the triple are identified using URIs (as in Expectations #1 and #2, above). This would turn our assertion into something like this with carriage returns added for readability:
+
+  http://www.archives.gov/exhibits/charters/declaration_transcript.html
+  was authored by
+  http://www.worldcat.org/identities/lccn-n79-89957
+
+Unfortunately, this assertion is not easily read by a computer. Believe it or not, something like the XML below is much more amenable, and if it were the sort of content returned by a Web server to a Web browser (read "user-agent"), then it would satisfy Expectations #3 and #4 because the notation is standardized and because it points to other people's content:
+
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <rdf:Description rdf:about="http://www.archives.gov/exhibits/charters/declaration_transcript.html">
+      <dc:creator>http://www.worldcat.org/identities/lccn-n79-89957</dc:creator>
+    </rdf:Description>
+  </rdf:RDF>
+
+Suppose we had a second assertion:
+
+  Thomas Jefferson was a man.
+
+In this case, the subject is "Thomas Jefferson". The predicate is "was". The object is "man". This assertion can be expressed in a more computer-readable fashion like this:
+
+  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:foaf="http://xmlns.com/foaf/0.1/">
+    <rdf:Description rdf:about="http://www.worldcat.org/identities/lccn-n79-89957">
+      <foaf:gender>male</foaf:gender>
+    </rdf:Description>
+  </rdf:RDF>
+
+Looking at the two assertions, a reasonable person can deduce a third assertion, namely, the Declaration Of Independence was authored by a man. Which brings us back to the point of the Semantic Web and Linked Data. If everybody uses URIs (read "URLs") to describe things, if everybody denotes relationships (through the use of predicates) between URIs, if everybody makes their data available on the Web in standardized formats, and if everybody uses similar URIs, then new knowledge can be deduced from the original relationships.
+
+Unfortunately and to-date too little Linked Data has been made available and/or too few people have earned too few stars to really make the Semantic Web a reality. The purpose of this guidebook is to provide means for archivists to do their part, make their content available on the Semantic Web through Linked Data, all in the hopes of facilitating the discovery of new knowledge. On our mark. Get set. Go!
+
+There are a number of challenges in the process. Some of them are listed below, and some of them have been alluded to above:
+
+  * Create useful LOD, meaning, create LOD that links to other LOD. LOD does not live in a world by itself. Remember, the “L” stands for “linked”. For example, try to include URIs that are the URIs used on other LOD data sets. Sometimes this is not possible, for example, le with the names of people in archival materials. When possible, they used VIAF, but other times they needed to create their own URI denoting an individual.
+
+  * There is a level of rigor involved in creating the data model, and there may be many discussions regarding semantics. For example, what is a creator? Or, when is a term intended to be an index term as opposed reference. When does one term in one vocabulary equal a different term in a different vocabulary?
+
+  * Balance the creation of your own vocabulary with the need to speak the language of others using their vocabulary.
+
+  * Consider “fixing” the data as it comes in or goes out because it might not be consistent nor thorough.
+
+  * Provenance is an issue. People — especially scholars — will want to know where the LOD came from and whether or not it is authoritative. How to solve or address this problem? The jury is still out on this one.
+
+  * Creating and maintaining LOD is difficult because it requires the skills of a number of different types of people. Computer programmers. Database designers. Subject experts. Metadata specialists. Archivists. Etc. A team is all but necessary.
+
 
      a. Objectives: management, access, and use and linked data affordances
      b. Overview of linked data concepts and vocabulary
@@ -184,6 +257,6 @@ Brief Outline
 
 --
 Eric Lease Morgan
-August 18, 2013
+September 3, 2013
 
 
